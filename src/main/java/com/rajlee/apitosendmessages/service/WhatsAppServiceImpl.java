@@ -52,11 +52,11 @@ public class WhatsAppServiceImpl implements WhatsAppService {
             } catch (HttpClientErrorException.Unauthorized ex) {
                 System.err.println("Unauthorized: Check your API key or permissions for WhatsApp API");
                 ex.printStackTrace();
-                // Handle unauthorized exception appropriately, e.g., logging, sending alert, etc.
+
             } catch (Exception e) {
                 System.err.println("Failed to send message to " + phoneNumber + ": " + e.getMessage());
                 e.printStackTrace();
-                // Handle other exceptions appropriately
+
             }
         }
     }
